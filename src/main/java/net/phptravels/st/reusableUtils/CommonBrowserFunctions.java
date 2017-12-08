@@ -1,4 +1,4 @@
-package st.phptravels.net.reusableUtils;
+package net.phptravels.st.reusableUtils;
 
 public interface CommonBrowserFunctions {
 	
