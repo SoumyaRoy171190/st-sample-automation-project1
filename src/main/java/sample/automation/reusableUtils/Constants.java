@@ -25,5 +25,6 @@ public class Constants {
 	 * Constants for Test Assignment 2
 	 */
 	public static String SampleAutomationPracticeUrl= "http://www.automationpractice.com";
+	public static String Expected_Order_Confirmation_Message = "Your order on My Store is complete.";
 	
 }

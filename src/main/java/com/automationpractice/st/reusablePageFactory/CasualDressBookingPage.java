@@ -8,6 +8,9 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
+
+import sample.automation.reusableUtils.Constants;
 
 public class CasualDressBookingPage {
 
@@ -49,6 +52,9 @@ public class CasualDressBookingPage {
 	@FindBy(how=How.XPATH,using="//p[@id='cart_navigation']/button")
 	WebElement confirmOrderBtn;
 	
+	@FindBy(how=How.XPATH,using="//div[@id='center_column']/p[1]")
+	WebElement confirmationMessagePath;
+	
 	public void buyCasualDresses() {
 	/*	Actions builder = new Actions(driver);
 		Action mouseOverDresses = builder.moveToElement(dressesLink).build();
@@ -68,5 +74,7 @@ public class CasualDressBookingPage {
 		processCarrierBtn.click();
 		payByCheckLinks.click();
 		confirmOrderBtn.click();
+		confirmationMessagePath = wait.until(ExpectedConditions.visibilityOf(confirmationMessagePath));
+		Assert.assertEquals(confirmationMessagePath.getText(), Constants.Expected_Order_Confirmation_Message, "Order Successfully placed");
 	}	
 }
