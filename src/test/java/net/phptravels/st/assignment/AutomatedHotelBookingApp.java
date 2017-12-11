@@ -7,7 +7,7 @@ import org.testng.annotations.Test;
 
 import net.phptravels.st.reusablePageFactory.PhPTravelHotelbookingPage;
 import net.phptravels.st.reusablePageFactory.PhPTravelLoginPage;
-import net.phptravels.st.reusableUtils.Constants;
+import sample.automation.reusableUtils.Constants;
 
 
 public class AutomatedHotelBookingApp {

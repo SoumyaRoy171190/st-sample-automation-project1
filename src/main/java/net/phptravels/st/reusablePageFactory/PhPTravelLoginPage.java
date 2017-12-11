@@ -12,7 +12,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 
 import junit.framework.Assert;
-import net.phptravels.st.reusableUtils.Constants;
+import sample.automation.reusableUtils.Constants;
 
 public class PhPTravelLoginPage {
 

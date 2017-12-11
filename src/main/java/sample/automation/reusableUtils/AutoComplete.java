@@ -1,4 +1,4 @@
-package net.phptravels.st.reusableUtils;
+package sample.automation.reusableUtils;
 
 import java.util.List;
 

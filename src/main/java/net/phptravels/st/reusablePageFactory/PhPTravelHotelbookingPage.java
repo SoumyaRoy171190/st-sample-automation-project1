@@ -10,7 +10,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 
-import net.phptravels.st.reusableUtils.Constants;
+import sample.automation.reusableUtils.Constants;
 
 public class PhPTravelHotelbookingPage {
 
