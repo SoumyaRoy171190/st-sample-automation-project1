@@ -4,10 +4,10 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Action;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class CasualDressBookingPage {
 
@@ -53,11 +53,14 @@ public class CasualDressBookingPage {
 	/*	Actions builder = new Actions(driver);
 		Action mouseOverDresses = builder.moveToElement(dressesLink).build();
 		mouseOverDresses.perform();*/
+		
+		WebDriverWait wait = new WebDriverWait(driver,20);
 		dressesLink.click();
 		casualDressLink.click();
 		firstAvailableCasualDress.click();
 		addToCartBtn.click();
 		driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
+		proceedToCheckOutPoPUpBtn = wait.until(ExpectedConditions.visibilityOf(proceedToCheckOutPoPUpBtn));
 		proceedToCheckOutPoPUpBtn.click();
 		proceedToCheckOutLink.click();
 		proceesAddressBtn.click();

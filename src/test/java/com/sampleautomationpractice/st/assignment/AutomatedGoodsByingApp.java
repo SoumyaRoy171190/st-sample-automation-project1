@@ -28,6 +28,7 @@ public class AutomatedGoodsByingApp {
 	
 	@Test(dependsOnMethods="loginToWebSite")
 	public void buyClothes() {
+		System.out.println("Into Buy Clothes Method");
 		CasualDressBookingPage dressBookPage = PageFactory.initElements(driver, CasualDressBookingPage.class);
 		dressBookPage.buyCasualDresses();
 	}
