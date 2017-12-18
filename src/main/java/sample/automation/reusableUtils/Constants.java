@@ -27,4 +27,11 @@ public class Constants {
 	public static String SampleAutomationPracticeUrl= "http://www.automationpractice.com";
 	public static String Expected_Order_Confirmation_Message = "Your order on My Store is complete.";
 	
+	/**
+	 * @author SoumyaRoy
+	 * Constants for Test Assignment 3
+	 */
+	public static String Login_User_Name_ZUMRO = "super";
+	public static String Login_Password_ZUMRO = "super";
+	public static String ZumroUrl = "http://demo.zurmo.com";	
 }
