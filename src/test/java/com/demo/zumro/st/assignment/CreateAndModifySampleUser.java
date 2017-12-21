@@ -27,8 +27,9 @@ public class CreateAndModifySampleUser {
 	}
 	
 	@Test(dependsOnMethods = {"loginZumro"})
-	void createAccount() {
+	void createModifyAccount() {
 		CreateModifyDemoZumro sample_Zumro_Page = PageFactory.initElements(driver, CreateModifyDemoZumro.class);
 		sample_Zumro_Page.createAccount();
+		sample_Zumro_Page.modifyAccount(Constants.Register_Acc_Name, Constants.edited_Content, Constants.edited_Type);
 	}
 }
