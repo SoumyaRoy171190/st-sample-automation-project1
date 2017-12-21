@@ -11,22 +11,23 @@ import com.automationpractice.st.reusablePageFactory.SampleAutomationPracticeLog
 import sample.automation.reusableUtils.Constants;
 
 public class AutomatedGoodsByingApp {
-	
+
 	WebDriver driver;
-	
+
 	@Test
 	public void openBrowser() {
 		driver = new FirefoxDriver();
 		driver.navigate().to(Constants.SampleAutomationPracticeUrl);
 	}
-	
-	@Test(dependsOnMethods={"openBrowser"})
+
+	@Test(dependsOnMethods = { "openBrowser" })
 	public void loginToWebSite() {
-		SampleAutomationPracticeLoginPage login_Page = PageFactory.initElements(driver, SampleAutomationPracticeLoginPage.class);
+		SampleAutomationPracticeLoginPage login_Page = PageFactory.initElements(driver,
+				SampleAutomationPracticeLoginPage.class);
 		login_Page.logInSampleAutomationPracticePage();
 	}
-	
-	@Test(dependsOnMethods="loginToWebSite")
+
+	@Test(dependsOnMethods = "loginToWebSite")
 	public void buyClothes() {
 		System.out.println("Into Buy Clothes Method");
 		CasualDressBookingPage dressBookPage = PageFactory.initElements(driver, CasualDressBookingPage.class);

@@ -43,7 +43,8 @@ public class CommonFunctions {
 		WebElement parentTable = driver.findElement(By.xpath(Constants.accountSearchParentTableXpath));
 		List<WebElement> accountLinks = parentTable.findElements(By.xpath("./tr"));
 		for (int i = 1; i <= accountLinks.size(); i++) {
-			String xpathOfEventElement = Constants.accountSearchParentTableXpath + Constants.tableRowXpathPrefix + i + Constants.searchTableNameLinkXpath;
+			String xpathOfEventElement = Constants.accountSearchParentTableXpath + Constants.tableRowXpathPrefix + i
+					+ Constants.searchTableNameLinkXpath;
 			WebElement eventElem = driver.findElement(By.xpath(xpathOfEventElement));
 			if (eventElem.getText().equalsIgnoreCase(name)) {
 				waitForElement(driver, eventElem);
@@ -52,18 +53,20 @@ public class CommonFunctions {
 			}
 		}
 	}
-	
+
 	public static String editedItemCheck(WebDriver driver, String changeType) {
-		
+
 		WebElement parentTable = driver.findElement(By.xpath(Constants.accountDetailsParentTableXpath));
 		waitForElement(driver, parentTable);
 		List<WebElement> accountList = parentTable.findElements(By.xpath("./tr"));
-		for(int i =1; i<= accountList.size(); i++) {
-			String xpathOfEventElem = Constants.accountDetailsParentTableXpath + Constants.tableRowXpathPrefix + i + Constants.accountDetailsTableHeaderContentXpath;
-			if(driver.findElement(By.xpath(xpathOfEventElem)).getText().equalsIgnoreCase(changeType)) {
+		for (int i = 1; i <= accountList.size(); i++) {
+			String xpathOfEventElem = Constants.accountDetailsParentTableXpath + Constants.tableRowXpathPrefix + i
+					+ Constants.accountDetailsTableHeaderContentXpath;
+			if (driver.findElement(By.xpath(xpathOfEventElem)).getText().equalsIgnoreCase(changeType)) {
 				break;
 			}
 		}
-		return driver.findElement(By.xpath(Constants.accountDetailsParentTableXpath + Constants.tableRowXpathPrefix + Constants.accountDetailsTableBodyContentXpath )).getText();
+		return driver.findElement(By.xpath(Constants.accountDetailsParentTableXpath + Constants.tableRowXpathPrefix
+				+ Constants.accountDetailsTableBodyContentXpath)).getText();
 	}
 }

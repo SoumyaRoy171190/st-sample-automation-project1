@@ -46,7 +46,7 @@ public class Constants {
 	public static String accountSearchParentTableXpath = "//div[@id='AccountsListView']//table/tbody";
 	public static String tableRowXpathPrefix = "/tr[";
 	public static String searchTableNameLinkXpath = "]/td[3]/a";
-	
+
 	public static String accountDetailsParentTableXpath = "//div[@id='AccountDetailsPortletView']//tbody";
 	public static String accountDetailsTableHeaderContentXpath = "]/th";
 	public static String accountDetailsTableBodyContentXpath = "]/td";

@@ -13,20 +13,20 @@ import sample.automation.reusableUtils.Constants;
 public class CreateAndModifySampleUser {
 
 	WebDriver driver;
-	
+
 	@Test
 	void openBrowser() {
 		driver = new FirefoxDriver();
 		driver.get(Constants.ZumroUrl);
 	}
-	
-	@Test(dependsOnMethods = {"openBrowser"})
+
+	@Test(dependsOnMethods = { "openBrowser" })
 	void loginZumro() {
 		DemoZumroLogin login_Zumro_Page = PageFactory.initElements(driver, DemoZumroLogin.class);
 		login_Zumro_Page.loginDemoZumro();
 	}
-	
-	@Test(dependsOnMethods = {"loginZumro"})
+
+	@Test(dependsOnMethods = { "loginZumro" })
 	void createModifyAccount() {
 		CreateModifyDemoZumro sample_Zumro_Page = PageFactory.initElements(driver, CreateModifyDemoZumro.class);
 		sample_Zumro_Page.createAccount();

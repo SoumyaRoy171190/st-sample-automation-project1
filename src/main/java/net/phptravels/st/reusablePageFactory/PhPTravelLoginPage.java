@@ -18,13 +18,12 @@ public class PhPTravelLoginPage {
 
 	private WebDriver driver;
 
-	
 	@FindBy(xpath = "//body/div[3]//div[2]//ul[@class='nav navbar-nav']")
 	WebElement languageTypeLink;
-	
-	@FindBy(how=How.XPATH,using="//body/div[3]//div[2]//ul[@class='nav navbar-nav']/li//li[1]/a[@id='en']")
+
+	@FindBy(how = How.XPATH, using = "//body/div[3]//div[2]//ul[@class='nav navbar-nav']/li//li[1]/a[@id='en']")
 	WebElement listEnglishLanguageLink;
-	
+
 	@FindBy(xpath = "//div[@class='navbar navbar-static-top navbar-default ']//li[@id='li_myaccount']")
 	WebElement myAcctLink;
 
@@ -39,7 +38,6 @@ public class PhPTravelLoginPage {
 
 	@FindBy(xpath = "//button[@type='submit'][contains(text(),'Login')]")
 	WebElement loginBtnLink;
-
 
 	public PhPTravelLoginPage(WebDriver driver) {
 		this.driver = driver;
